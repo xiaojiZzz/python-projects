@@ -35,7 +35,7 @@ class Solution:
             return False
         slow, fast = head, head.next
         while slow is not fast:
-            if fast is not None and fast.next is not None:
+            if fast and fast.next:
                 fast = fast.next.next
                 slow = slow.next
             else:
