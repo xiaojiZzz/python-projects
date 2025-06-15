@@ -33,6 +33,7 @@ class Solution:
         return pre
 
 
+"""
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
         if head is None or head.next is None:
@@ -41,3 +42,4 @@ class Solution:
         head.next.next = head
         head.next = None
         return p
+"""
