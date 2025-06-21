@@ -17,7 +17,7 @@
 -231 <= Node.val <= 231 - 1
 """
 from math import inf
-from typing import Optional, List
+from typing import Optional
 
 from treenode import TreeNode
 
