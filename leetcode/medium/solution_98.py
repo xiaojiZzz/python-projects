@@ -17,7 +17,7 @@
 -231 <= Node.val <= 231 - 1
 """
 from math import inf
-from typing import Optional
+from typing import Optional, List
 
 from treenode import TreeNode
 
@@ -29,3 +29,36 @@ class Solution:
         if root.val <= lower or root.val >= upper:
             return False
         return self.isValidBST(root.left, lower, root.val) and self.isValidBST(root.right, root.val, upper)
+
+
+"""
+class Solution:
+    def __init__(self):
+        self.pre = -inf
+
+    def isValidBST(self, root: Optional[TreeNode]) -> bool:
+        if root is None:
+            return True
+        if not self.isValidBST(root.left):
+            return False
+        if root.val <= self.pre:
+            return False
+        self.pre = root.val
+        return self.isValidBST(root.right)
+"""
+
+"""
+class Solution:
+    def isValidBST(self, root: Optional[TreeNode]) -> bool:
+        return self.dfs(root)[1] != inf
+
+    def dfs(self, node: Optional[TreeNode]) -> tuple:
+        if node is None:
+            return inf, -inf
+        left = self.dfs(node.left)
+        right = self.dfs(node.right)
+        x = node.val
+        if x <= left[1] or x >= right[0]:
+            return -inf, inf
+        return min(left[0], x), max(right[1], x)
+"""
