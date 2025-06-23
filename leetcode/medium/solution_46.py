@@ -36,6 +36,7 @@ class Solution:
         return ans
 
 
+"""
 class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
         ans, path = [], []
@@ -53,3 +54,4 @@ class Solution:
 
         dfs(0)
         return ans
+"""
