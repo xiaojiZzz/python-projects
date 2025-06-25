@@ -32,6 +32,7 @@ class Solution:
         return left
 
 
+"""
 class Solution:
     def searchInsert(self, nums: List[int], target: int) -> int:
         left, right = 0, len(nums)
@@ -54,3 +55,4 @@ class Solution:
             else:
                 right = mid
         return right
+"""
